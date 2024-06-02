@@ -1,2 +1,9 @@
 **/.git
 *.code-workspace
+*.deps.json
+*.dll
+*.exe
+*.pdb
+*.runtimeconfig.json
+appsettings.Development.json
+appsettings.json
