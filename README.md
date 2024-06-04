@@ -5,3 +5,4 @@ The repository is for storing the files needed to complete the course.
 
 All file in this repository are will use unix line endings.
 
+Fellow group project collaborators please clone this repo so that you will have the same working environment for the projects.
