@@ -7,3 +7,11 @@
 *.runtimeconfig.json
 appsettings.Development.json
 appsettings.json
+**/*/obj/*/net8.0/*.AssemblyInfo.cs
+**/*/obj/*/net8.0/*.AssemblyInfoInputs.cache
+**/*/obj/*/net8.0/*.dll
+**/*/obj/*/net8.0/*.sourcelink.jason
+**/*/obj/*/net8.0/*.pdb
+**/*/obj/*/net8.0/*.exe
+**/*/obj/*/net8.0/ref/*.dll
+**/*/obj/*/net8.0/refint/*.dll
