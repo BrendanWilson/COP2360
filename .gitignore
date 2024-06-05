@@ -11,6 +11,9 @@ appsettings.json
 **/*/obj/*/net8.0/*.AssemblyInfoInputs.cache
 **/*/obj/*/net8.0/*.dll
 **/*/obj/*/net8.0/*.sourcelink.json
+**/*/obj/*/net8.0/*.csproj.CoreCompileInputs.cache
+**/*/obj/*/net8.0/*.csproj.FileListAbsolute.txt
+**/*/obj/*/net8.0/*.genruntimeconfig.cache
 **/*/obj/*/net8.0/*.pdb
 **/*/obj/*/net8.0/*.exe
 **/*/obj/*/net8.0/ref/*.dll

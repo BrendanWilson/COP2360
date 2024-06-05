@@ -16,7 +16,7 @@
 
             //dividing the numbers with static int method a display the result in the console
             int result = Divide(number1, number2);
-            Console.WriteLine($"the result of {number1} divided by {number1} is {result}");
+            Console.WriteLine($"the result of {number1} divided by {number2} is {result}");
         }
         catch (FormatException ex)
         {
@@ -33,7 +33,7 @@
         catch (OverflowException ex)
         {
             //catching over flow error if either or both of the inputs are not a good integer
-            Console.WriteLine("Error: One or both inputs are not a valid integer.");
+            Console.WriteLine("Error: One or both inputs larger that 32bits.");
             Console.WriteLine($"Details: {ex.Message}");
         }
         catch (Exception ex)
@@ -43,7 +43,7 @@
             Console.WriteLine($"Details: {ex.Message}");
         }
         //cleanly exit the program
-        Console.WriteLine("Enter the first number:");
+        Console.WriteLine("Press any key to exit.");
         Console.ReadKey();
     }
     // static int method to divide two integers
