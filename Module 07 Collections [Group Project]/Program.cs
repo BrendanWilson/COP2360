@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 
@@ -7,6 +8,20 @@ namespace Module7Project
 {
     class Program
     {
+        /*
+        Our project creates a simple editable student directory.
+
+        Directory Structure:
+            Key  : Student Number (integer)
+            Value: A list with this formatting -> Last Name(50 chars max), First Name(25 chars max), Major(50 chars max) 
+        
+        What can be done to the Directory(dictionary)
+            1) Add new students.
+            2) Edit current students.
+            3) Remove students.
+            4) Display current students.
+            5) Sort students by their student number.
+        */
         static void Main()
         {
             // Creating a student dictionary
@@ -60,6 +75,32 @@ namespace Module7Project
 
             //To sort the keys in the dictionary.
             
+        }
+        // input controls for preventing the input of wrong data types
+        int GetInputInteger()
+        {
+            Console.WriteLine("Enter Number:");
+            string input = Console.ReadLine();
+            int value = int.Parse(input);
+            /*try
+            {
+                Console.WriteLine("Enter Number:");
+                string input = Console.ReadLine();
+                int value = int.Parse(input);
+            }*/
+            return value;
+        }
+        string GetInputString()
+        {
+            Console.WriteLine("Enter Number:");
+            string input = Console.ReadLine();
+            /*try
+            {
+                Console.WriteLine("Enter Number:");
+                string input = Console.ReadLine();
+                int value = int.Parse(input);
+            }*/
+            return input;
         }
     }    
 }

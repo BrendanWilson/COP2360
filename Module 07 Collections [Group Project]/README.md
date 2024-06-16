@@ -28,7 +28,7 @@ Make sure your code is well-organized and thoroughly commented to explain each s
 
     Dictionary Structure
 
-        Key  : Student Number (intiger)
+        Key  : Student Number (integer)
         Value: A list with this formatting -> Last Name(50 chars max), First Name(25 chars max), Major
     
     What can be done to the Directory(dictionary)
