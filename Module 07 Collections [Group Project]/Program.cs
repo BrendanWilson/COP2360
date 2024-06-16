@@ -25,15 +25,20 @@ namespace Module7Project
         // input controls for preventing the input of wrong data types
         static int GetInputInteger()
         {
+            //Get a integer value and warn the person if the put any thing in besides a number.
+            int value = 0;
+            startInput:
             Console.WriteLine("Enter Number:");
             string input = Console.ReadLine();
-            int value = int.Parse(input);
-            /*try
+            try
             {
-                Console.WriteLine("Enter Number:");
-                string input = Console.ReadLine();
-                int value = int.Parse(input);
-            }*/
+                value = int.Parse(input);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("That's not a number!");
+                goto startInput;
+            }
             return value;
         }
         static string GetInputString()
@@ -75,17 +80,17 @@ namespace Module7Project
                 {
                     case 1:
                         // Add new student
-                        Console.Write("Stident ID Number ");
+                        Console.Write("Student ID Number ");
                         studentID = GetInputInteger();
                         break;
                     case 2:
                         // Edit a student's information.
-                        Console.Write("Stident ID Number ");
+                        Console.Write("Student ID Number ");
                         studentID = GetInputInteger();
                         break;
                     case 3:
                         // Remove a student.
-                        Console.Write("Stident ID Number ");
+                        Console.Write("Student ID Number ");
                         studentID = GetInputInteger();
                         break;
                     case 4:
@@ -94,7 +99,7 @@ namespace Module7Project
                             Brought this code up from lower commented out section.
                             .Skip was used as part of a method by LINQ to make this new info the next index number.
                         */
-                        Console.Write("Curent student directory:");
+                        Console.Write("Current student directory:");
                         foreach (var student in StudentDictionary)
                         {
                             studentID = student.Key;
