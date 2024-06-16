@@ -22,6 +22,32 @@ namespace Module7Project
             4) Display current students.
             5) Sort students by their student number.
         */
+        // input controls for preventing the input of wrong data types
+        static int GetInputInteger()
+        {
+            Console.WriteLine("Enter Number:");
+            string input = Console.ReadLine();
+            int value = int.Parse(input);
+            /*try
+            {
+                Console.WriteLine("Enter Number:");
+                string input = Console.ReadLine();
+                int value = int.Parse(input);
+            }*/
+            return value;
+        }
+        static string GetInputString()
+        {
+            Console.WriteLine("Enter Information:");
+            string input = Console.ReadLine();
+            /*try
+            {
+                Console.WriteLine("Enter Number:");
+                string input = Console.ReadLine();
+                int value = int.Parse(input);
+            }*/
+            return input;
+        }
         static void Main()
         {
             // Creating a student dictionary
@@ -40,26 +66,27 @@ namespace Module7Project
             Console.WriteLine(" 4) Display current students.");
             Console.WriteLine(" 5) Sort students by their student number.");
             Console.WriteLine(" 0) Done.");
-            int choice=GetInputInteger();
+            int choice=Program.GetInputInteger();
 
             while (choice != 0)
             {
+                int studentID = 0;
                 switch (choice)
                 {
                     case 1:
                         // Add new student
                         Console.Write("Stident ID Number ");
-                        int studentID = GetInputInteger();
+                        studentID = GetInputInteger();
                         break;
                     case 2:
                         // Edit a student's information.
                         Console.Write("Stident ID Number ");
-                        int studentID = GetInputInteger();
+                        studentID = GetInputInteger();
                         break;
                     case 3:
                         // Remove a student.
                         Console.Write("Stident ID Number ");
-                        int studentID = GetInputInteger();
+                        studentID = GetInputInteger();
                         break;
                     case 4:
                         /*
@@ -70,7 +97,7 @@ namespace Module7Project
                         Console.Write("Curent student directory:");
                         foreach (var student in StudentDictionary)
                         {
-                            int studentID = student.Key;
+                            studentID = student.Key;
                             List<string> studentInfo = student.Value;
                             Console.WriteLine($"Student Number: {studentID}, Last Name: {studentInfo[0]}, First Name: {studentInfo[1]}, Major: {studentInfo[2]}");
                             Console.WriteLine("Additional Information: " + string.Join(", ", studentInfo.Skip(3)));
@@ -138,32 +165,7 @@ namespace Module7Project
             //To sort the keys in the dictionary.
             */
         }
-        // input controls for preventing the input of wrong data types
-        int GetInputInteger()
-        {
-            Console.WriteLine("Enter Number:");
-            string input = Console.ReadLine();
-            int value = int.Parse(input);
-            /*try
-            {
-                Console.WriteLine("Enter Number:");
-                string input = Console.ReadLine();
-                int value = int.Parse(input);
-            }*/
-            return value;
-        }
-        string GetInputString()
-        {
-            Console.WriteLine("Enter Number:");
-            string input = Console.ReadLine();
-            /*try
-            {
-                Console.WriteLine("Enter Number:");
-                string input = Console.ReadLine();
-                int value = int.Parse(input);
-            }*/
-            return input;
-        }
+        
     }    
 }
 //testing
