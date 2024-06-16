@@ -18,3 +18,9 @@ appsettings.json
 **/*/obj/*/net8.0/*.exe
 **/*/obj/*/net8.0/ref/*.dll
 **/*/obj/*/net8.0/refint/*.dll
+**/*/obj/*/net8.0/*.assets.cache
+**/*/obj/*/net8.0/*.GeneratedMSBuildEditorConfig.editorconfig
+**/*/obj/*.csproj.nuget.g.props
+**/*/obj/*.csproj.nuget.dgspec.json
+**/*/obj/*.assets.json
+**/*/obj/*.nuget.cache
