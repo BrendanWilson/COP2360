@@ -83,11 +83,18 @@ namespace Module7Project
                         Console.WriteLine("Student added successfully.");
                         break;
 
-                    //case 2:
+                    case 2:
                         //Edit a student's information.
-                        //Console.Write("Student ID Number ");
-                        //studentID = GetInputInteger();
-                        //break;
+                        Console.Write(" ");
+						int updatedStudentInfo = GetInputInteger();
+						Console.WriteLine("Last Name: ");
+						string newLastName = Console.ReadLine();
+						Console.WriteLine("First Name: ");
+						string newFirstName = Console.ReadLine();
+						Console.WriteLine("Major: ");
+						string newMajor = Console.ReadLine();
+						StudentDictionary[updatedStudentInfo] = new List<string> { newLastName, newFirstName, newMajor };
+                        break;
 
                     case 3:
                         // Remove a student
