@@ -66,7 +66,7 @@ namespace Module7Project
             Console.WriteLine(" 4) Display current students.");
             Console.WriteLine(" 5) Sort students by their student number.");
             Console.WriteLine(" 0) Done.");
-            int choice=Program.GetInputInteger();
+            int choice = GetInputInteger();
 
             while (choice != 0)
             {
@@ -116,7 +116,7 @@ namespace Module7Project
                 Console.WriteLine(" 4) Display current students.");
                 Console.WriteLine(" 5) Sort students by their student number.");
                 Console.WriteLine(" 0) Done.");
-                int choice=GetInputInteger();
+                choice=GetInputInteger();
             }
 
             /*
