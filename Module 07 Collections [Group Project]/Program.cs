@@ -27,7 +27,7 @@ namespace Module7Project
         {
             //Get a integer value and warn the person if the put any thing in besides a number.
             int value = 0;
-        startInput:
+            startInput:
             Console.WriteLine("Enter Number:");
             string input = Console.ReadLine();
             try
@@ -94,6 +94,31 @@ namespace Module7Project
 						Console.WriteLine("Major: ");
 						string newMajor = Console.ReadLine();
 						StudentDictionary[updatedStudentInfo] = new List<string> { newLastName, newFirstName, newMajor };
+                        //Alternate method for editing student information.
+                        //Console.Write("Student ID Number ");
+                        //int curStudentID = GetInputInteger();
+                        //List<string> studentData = StudentDictionary[curStudentID];
+                        //Console.WriteLine($"Student Number: {curStudentID}, Last Name: {studentData[0]}, First Name: {studentData[1]}, Major: {studentData[2]}");
+                        //Console.WriteLine("What would you like to edit:");
+                        //Console.WriteLine(" 1) Last name.");
+                        //Console.WriteLine(" 2) First name.");
+                        //Console.WriteLine(" 3) Major.");
+                        //int which = GetInputInteger();
+                        //switch (which)
+                        //{
+                        //    case 1:
+                        //        studentData[0] = GetInputString("Enter Last Name:");
+                        //        break;
+                        //    case 2:
+                        //        studentData[1] = GetInputString("Enter First Name:");
+                        //        break;
+                        //    case 3:
+                        //        studentData[2] = GetInputString("Enter Major Name:");
+                        //        break;
+                        //    default:
+                        //        Console.WriteLine("Invalid input.")
+                        //}
+                        //StudentDictionary[curStudentID] = studentData;
                         break;
 
                     case 3:
@@ -145,7 +170,30 @@ namespace Module7Project
 
                     case 6:
                         // Sort students by their student number.
-                        Console.Write("Sorting Directory(needs to be done).");
+                        Dictionary<int, List<string>> tempDictionary = new Dictionary<int, List<string>>();
+                        Console.Write("Sorting Directory..");
+                        var tempKeyList = new List<int>();
+                        Console.Write("..");
+                        //pull keys into a tempList for sorting.
+                        foreach (var student in StudentDictionary)
+                        {
+                            tempKeyList.Add(student.Key);
+                            Console.Write("..");
+                        }
+                        Console.Write("..");
+                        //Sort tempList.
+                        tempKeyList.Sort();
+                        Console.Write("..");
+                        //Copy values from StudentDictionary to tempDictionary based on tempKeyList.
+                        foreach (int i in tempKeyList)
+                        {
+                            tempDictionary[i] = StudentDictionary[i];
+                            Console.Write("..");
+                        }
+                        Console.Write("..");
+                        //Copy data back to StudentDictionary by making it equal to tempDictionary.
+                        StudentDictionary = tempDictionary;
+                        Console.WriteLine("Done.");
                         break;
 
                     case 0:
