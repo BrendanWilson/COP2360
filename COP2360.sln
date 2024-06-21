@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module_4_P-1", "Module_4_P-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module 07 Collections [Group Project]", "Module 07 Collections [Group Project]\Module 07 Collections [Group Project].csproj", "{FB162471-CC9B-4FDE-9764-96483A1CDCBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module 10 Final Project (Classes & Objects)", "Module 10 Final Project (Classes & Objects)\Module 10 Final Project (Classes & Objects).csproj", "{F1DD24CA-5FAD-4E14-A653-97E9682C8A8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{FB162471-CC9B-4FDE-9764-96483A1CDCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB162471-CC9B-4FDE-9764-96483A1CDCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB162471-CC9B-4FDE-9764-96483A1CDCBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1DD24CA-5FAD-4E14-A653-97E9682C8A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DD24CA-5FAD-4E14-A653-97E9682C8A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DD24CA-5FAD-4E14-A653-97E9682C8A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DD24CA-5FAD-4E14-A653-97E9682C8A8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
