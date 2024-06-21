@@ -209,7 +209,3 @@ namespace Module7Project
         }
     }
 }
-
-// TO DO: move all the code below into the proper switch case above
-// Case 2: edit a student's information
-// Case 6: Sort the keys in the dictionary.
