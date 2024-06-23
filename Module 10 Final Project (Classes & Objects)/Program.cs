@@ -1,39 +1,35 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 // Part 1: Contractor Class
 public class Contractor
 {
     // Control access to properties. Private to the Contractor
     // class.
-    private string ContractorName;
-    private string ContractorNumber;
-    private DateTime ContractorStartDate;
+    private string contractorName;
+    private string contractorNumber;
+    private DateTime contractorStartDate;
 
     // Setting ContractorName, ContractorNumber and
     // ContractorStartDate to public.
-    public string contractorname
+    public string ContractorName
     {
-        get { return ContractorName; }
-        set { ContractorName = value; }
+        get { return contractorName; }
+        set { contractorName = value; }
 
     }
 
-    public string contractornumber
+    public string ContractorNumber
     {
-        get { return ContractorNumber; }
-        set { ContractorNumber = value; }
+        get { return contractorNumber; }
+        set { contractorNumber = value; }
 
     }
 
-    public DateTime contractorstartdate
+    public DateTime ContractorStartDate
     {
-        get { return ContractorStartDate; }
-        set { ContractorStartDate = value; }
+        get { return contractorStartDate; }
+        set { contractorStartDate = value; }
     }
 
 
@@ -41,9 +37,9 @@ public class Contractor
 // and start date.
     public Contractor(string name, string number, DateTime startDate)
     {
-        contractorname = name;
-        contractornumber = number;
-        contractorstartdate = startDate;
+        ContractorName = name;
+        ContractorNumber = number;
+        ContractorStartDate = startDate;
 
     }
 }
@@ -73,23 +69,23 @@ public class Subcontractor : Contractor // All fields, properties, and methods
 
     }
 
-    public Subcontractor(string name, string number, DateTime startDate, int shift, double hourlypayrate)
+    public Subcontractor(string name, string number, DateTime startDate, int shift, double hourlyPayRate)
     :base(name, number, startDate) // New method not inherited from parent class.
     {
         subontractorShift = shift;
-        HourlyPayRate = HourlyPayRate;
-
+        HourlyPayRate = hourlyPayRate;
+        // hourpayrate testing to fix problem
     }
 
     // To compute 3% differential pay.
     public float CalculatePay(float hoursWorked)
     {
-        double basepay = hoursWorked * HourlyPayRate;
+        double basePay = hoursWorked * hourlyPayRate;
         if (Shift == 2) // Night shift
         {
-            basepay = basepay * 1.03; // Night shift differential
+            basePay = basePay * 1.03; // Night shift differential
         }
-        return (float)basepay;
+        return (float)basePay;
     }
 
 }
@@ -129,16 +125,16 @@ public class Program
         Console.WriteLine("\nSubcontractors Information:");
         foreach (var subcontractor in subcontractors)
         {
-            Console.WriteLine($"\nName: {subcontractor.contractorname}");
-            Console.WriteLine($"Number: {subcontractor.contractornumber}");
-            Console.WriteLine($"Start Date: {subcontractor.contractorstartdate:yyyy-MM-dd}");
+            Console.WriteLine($"\nName: {subcontractor.ContractorName}");
+            Console.WriteLine($"Number: {subcontractor.ContractorNumber}");
+            Console.WriteLine($"Start Date: {subcontractor.ContractorStartDate:yyyy-MM-dd}");
             Console.WriteLine($"Shift: {subcontractor.Shift}");
             Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate}");
 
         // Compute pay
         float hoursWorked = 12;
-        float basepay = subcontractor.CalculatePay(hoursWorked);
-        Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basepay:F2}");
+        float basePay = subcontractor.CalculatePay(hoursWorked);
+        Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basePay:F2}");
     }
 }
 }
