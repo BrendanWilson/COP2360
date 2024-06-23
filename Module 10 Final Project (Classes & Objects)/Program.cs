@@ -129,12 +129,12 @@ public class Program
             Console.WriteLine($"Number: {subcontractor.ContractorNumber}");
             Console.WriteLine($"Start Date: {subcontractor.ContractorStartDate:yyyy-MM-dd}");
             Console.WriteLine($"Shift: {subcontractor.Shift}");
-            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate}");
+            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate:F2}");
 
         // Compute pay
         float hoursWorked = 12;
-        float basePay = subcontractor.CalculatePay(hoursWorked);
-        Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basePay:F2}");
+        float basepay = subcontractor.CalculatePay(hoursWorked);
+        Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basepay:F2}");
     }
 }
 }
