@@ -69,7 +69,7 @@ public class Subcontractor : Contractor // All fields, properties, and methods
     public double HourlyPayRate
     {
         get { return HourlyPayRate; }
-        set { hourlyPayRate = value; }
+        set { HourlyPayRate = value; }
 
     }
 
@@ -77,14 +77,14 @@ public class Subcontractor : Contractor // All fields, properties, and methods
     :base(name, number, startDate) // New method not inherited from parent class.
     {
         subontractorShift = shift;
-        HourlyPayRate = hourlyPayRate;
+        HourlyPayRate = HourlyPayRate;
 
     }
 
     // To compute 3% differential pay.
     public float CalculatePay(float hoursWorked)
     {
-        double basepay = hoursWorked * hourlyPayRate;
+        double basepay = hoursWorked * HourlyPayRate;
         if (Shift == 2) // Night shift
         {
             basepay = basepay * 1.03; // Night shift differential
@@ -94,10 +94,51 @@ public class Subcontractor : Contractor // All fields, properties, and methods
 
 }
 
-
-
-
-
-
-
 //Part 3: The Subcontractor Program
+
+public class Program
+{
+    public static void Main()
+    {
+        // Prompt user to enter number of subcontractors
+        Console.Write("Enter the number of subcontractors: ");
+        int numSubcontractors = int.Parse(Console.ReadLine());
+
+        // Create an array to store subcontractors
+        Subcontractor[] subcontractors = new Subcontractor[numSubcontractors];
+
+        // Input subcontractor details
+        for (int i = 0; i < numSubcontractors; i++)
+        {
+            Console.WriteLine($"\nSubcontractor {i + 1}:");
+            Console.Write("Subcontractor Name: ");
+            string name = Console.ReadLine();
+            Console.Write("Subcontractor Number: ");
+            string number = Console.ReadLine();
+            Console.Write("Start Date (YYYY-MM-DD): ");
+            DateTime startDate = DateTime.Parse(Console.ReadLine());
+            Console.Write("Shift (1) day or (2) night): ");
+            int shift = int.Parse(Console.ReadLine());
+            Console.Write("Hourly Pay Rate: $");
+            double hourlyPayRate = double.Parse(Console.ReadLine());
+
+            subcontractors[i] = new Subcontractor(name, number, startDate, shift, hourlyPayRate);
+        }
+
+        // Display subcontractor information and compute pay
+        Console.WriteLine("\nSubcontractors Information:");
+        foreach (var subcontractor in subcontractors)
+        {
+            Console.WriteLine($"\nName: {subcontractor.contractorname.GetType()}");
+            Console.WriteLine($"Number: {subcontractor.contractornumber.GetType()}");
+            Console.WriteLine($"Start Date: {subcontractor.contractorstartdate.GetType():yyyy-MM-dd}");
+            Console.WriteLine($"Shift: {subcontractor.Shift.GetType()}");
+            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate.GetType()}");
+
+        // Compute pay
+        float hoursWorked = 12;
+        double basepay = subcontractor.CalculatePay(hoursWorked);
+        Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basepay:F2}");
+    }
+}
+}
