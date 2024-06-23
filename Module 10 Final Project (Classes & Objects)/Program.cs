@@ -68,8 +68,8 @@ public class Subcontractor : Contractor // All fields, properties, and methods
 
     public double HourlyPayRate
     {
-        get { return HourlyPayRate; }
-        set { HourlyPayRate = value; }
+        get { return hourlyPayRate; }
+        set { hourlyPayRate = value; }
 
     }
 
@@ -129,15 +129,15 @@ public class Program
         Console.WriteLine("\nSubcontractors Information:");
         foreach (var subcontractor in subcontractors)
         {
-            Console.WriteLine($"\nName: {subcontractor.contractorname.GetType()}");
-            Console.WriteLine($"Number: {subcontractor.contractornumber.GetType()}");
-            Console.WriteLine($"Start Date: {subcontractor.contractorstartdate.GetType():yyyy-MM-dd}");
-            Console.WriteLine($"Shift: {subcontractor.Shift.GetType()}");
-            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate.GetType()}");
+            Console.WriteLine($"\nName: {subcontractor.contractorname}");
+            Console.WriteLine($"Number: {subcontractor.contractornumber}");
+            Console.WriteLine($"Start Date: {subcontractor.contractorstartdate:yyyy-MM-dd}");
+            Console.WriteLine($"Shift: {subcontractor.Shift}");
+            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate}");
 
         // Compute pay
         float hoursWorked = 12;
-        double basepay = subcontractor.CalculatePay(hoursWorked);
+        float basepay = subcontractor.CalculatePay(hoursWorked);
         Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basepay:F2}");
     }
 }
