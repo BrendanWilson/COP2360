@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 
 // Part 1: Contractor Class
@@ -94,6 +94,12 @@ public class Subcontractor : Contractor // All fields, properties, and methods
 
 public class Program
 {
+    /*
+    TODO List
+    1. Streamline Main() by adding input functions and using switch statement.
+    2. Refactor Main() so that it has more functionality and gives the user options.
+    3. Make the storage of the subcontractors less rigid.    
+    */
     public static void Main()
     {
         // Prompt user to enter number of subcontractors
@@ -129,12 +135,12 @@ public class Program
             Console.WriteLine($"Number: {subcontractor.ContractorNumber}");
             Console.WriteLine($"Start Date: {subcontractor.ContractorStartDate:yyyy-MM-dd}");
             Console.WriteLine($"Shift: {subcontractor.Shift}");
-            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate:F2}");
+            Console.WriteLine($"Hourly Pay Rate: ${subcontractor.HourlyPayRate:F2}");//Corrected formatting by adding :F2
 
-        // Compute pay
-        float hoursWorked = 12;
-        float basepay = subcontractor.CalculatePay(hoursWorked);
-        Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basepay:F2}");
+            // Compute pay
+            float hoursWorked = 12;
+            float basepay = subcontractor.CalculatePay(hoursWorked);
+            Console.WriteLine($"Pay for {hoursWorked} hours worked: ${basepay:F2}");
+        }
     }
-}
 }
